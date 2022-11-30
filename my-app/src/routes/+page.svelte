@@ -39,7 +39,17 @@
   }
 
   #menuToggle a:hover {
-    color: palevioletred;
+    position: relative;
+    display: inline-block;
+    font-weight: 30;
+    overflow: hidden;
+    background: linear-gradient(to right, black 10%, yellow 40%, black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
   }
 
   #menuToggle input {
@@ -95,19 +105,17 @@
     position: absolute;
     width: fit-content;
     margin: 0;
-    padding: 50px;
-    background: yellow;
+    padding: 30px;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    border: solid black 5px;
+    border: solid black 2px;
   }
 
   #menu li {
     padding: 10px 0;
-    font-size: 22px;
   }
 
   #menuToggle input:checked ~ ul {
